@@ -1,3 +1,4 @@
+
 /* d-flex w-100 vh-100 justify-content-center align-items-center bg-light */
 .main-content{
   display: flex;
@@ -5,7 +6,7 @@
   height:1000px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(93, 92, 92);
+
 }
 /* w-50 border bg-white shadow px-5 pt-3 pb-5 rounded */
 .main-form{
@@ -14,8 +15,8 @@
   align-items: center;
   width:500px;
   height:800px;
-  background-color: rgb(238, 235, 230);
-  box-shadow: 5px 5px 5px black;
+  background-color: transparent;
+  box-shadow: 5px 5px 5px 5px black;
   border-radius:20px;
  padding: 30px;
   font-size: 20px;
