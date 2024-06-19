@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import "../App.css";
 import { useNavigate } from "react-router-dom";
+
+import "../styles/Userform.css";
 
 export default function Userform() {
   const [form, setForm] = useState({
-    fullName: "",
+    name: "",
     emailId: "",
     mobile: "",
     eventName: "",
@@ -22,68 +23,110 @@ export default function Userform() {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem("formData", JSON.stringify(form));
-    navigate("/create");
+    sessionStorage.setItem("formData", JSON.stringify(form));
+    navigate("/list");
   };
 
   return (
     <div>
       <form className="main-form" onSubmit={handleSubmit}>
-        <h1>Fill the form..</h1>
-        <label htmlFor="fullName">Fullname : </label>
-        <input
-          type="text"
-          name="fullName"
-          value={form.fullName}
-          onChange={handleChange}
-          placeholder="Fullname"
-          required
-        />
-        <label htmlFor="emailId">Email ID : </label>
-        <input
-          type="email"
-          name="emailId"
-          placeholder="Email ID"
-          value={form.emailId}
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="mobile">Mobile : </label>
-        <input
-          type="tel"
-          name="mobile"
-          placeholder="Mobile Number"
-          value={form.mobile}
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="eventName">Event Name : </label>
-        <input
-          type="text"
-          name="eventName"
-          placeholder="Event Name"
-          value={form.eventName}
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="place">Place : </label>
-        <input
-          type="text"
-          name="place"
-          placeholder="Place"
-          value={form.place}
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor="date">Date : </label>
-        <input
-          type="date"
-          name="date"
-          value={form.date}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit" className="btn btn-success">
+        <h1>Ungala pathi sollitu moi eluthunga..</h1>
+        <div className="forms">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder=" "
+            className="form__input"
+            autoComplete="off"
+            value={form.name}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="name" className="form__label">
+            Fullname
+          </label>
+        </div>
+        <div className="forms">
+          <input
+            type="email"
+            name="emailId"
+            id="emailId"
+            placeholder=" "
+            className="form__input"
+            autoComplete="off"
+            value={form.emailId}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="emailId" className="form__label">
+            Email Id
+          </label>
+        </div>
+        <div className="forms">
+          <input
+            type="text"
+            id="mobile"
+            name="mobile"
+            placeholder=" "
+            className="form__input"
+            autoComplete="off"
+            value={form.mobile}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="mobile" className="form__label">
+            Mobile
+          </label>
+        </div>
+        <div className="forms">
+          <input
+            type="text"
+            id="eventName"
+            name="eventName"
+            placeholder=" "
+            className="form__input"
+            autoComplete="off"
+            value={form.eventName}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="eventName" className="form__label">
+            Event Name
+          </label>
+        </div>
+        <div className="forms">
+          <input
+            type="text"
+            id="place"
+            name="place"
+            placeholder=" "
+            className="form__input"
+            autoComplete="off"
+            value={form.place}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="place" className="form__label">
+            Place
+          </label>
+        </div>
+        <div className="forms">
+          <input
+            type="date"
+            id="date"
+            name="date"
+            className="form__input"
+            autoComplete="off"
+            value={form.date}
+            onChange={handleChange}
+            required
+          />
+          <label htmlFor="date" className="form__label">
+            Date
+          </label>
+        </div>
+        <button type="submit" className="btn-submit">
           Submit
         </button>
       </form>

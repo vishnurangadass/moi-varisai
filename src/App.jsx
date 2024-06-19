@@ -7,7 +7,7 @@ import Update from "./components/Update";
 import Read from "./components/Read";
 import Userform from "./components/Userform";
 import List from "./components/List";
-import Export from "./components/Export";
+
 
 function App() {
   return (
@@ -17,7 +17,6 @@ function App() {
         <Route path="/useform" element={<Userform />}></Route>
         <Route path="/create" element={<Create />}></Route>
         <Route path="/list" element={<List />}></Route>
-        <Route path="/export" element={<Export />}></Route>
         <Route path="/update/:id" element={<Update />}></Route>
         <Route path="/read/:id" element={<Read />}></Route>
       </Routes>

@@ -1,61 +1,73 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import "../styles/Create.css";
+
 export default function Create() {
   const [value, setValue] = useState({
     name: "",
     address: "",
-    amount:"",
+    amount: "",
   });
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const existingUsers = JSON.parse(sessionStorage.getItem("users")) || [];
     const newUser = { ...value };
     existingUsers.push(newUser);
-    localStorage.setItem("users", JSON.stringify(existingUsers));
+    sessionStorage.setItem("users", JSON.stringify(existingUsers));
     navigate("/list");
   };
 
   return (
-    <div className="d-flex w-100 vh-100 justify-content-center align-items-center">
+    <div className="d-flex w-100 vh-100 justify-content-center align-items-center ">
       <div className="w-50 border bg-white shadow px-5 pt-3 pb-5 rounded">
-        <h1>Add a user</h1>
         <form onSubmit={handleSubmit}>
-          <div className="mb-2">
-            <label htmlFor="name">Name :</label>
+          <h1>Add the details</h1>
+          <div className="forms">
             <input
               type="text"
-              name="name"
-              className="form-control"
-              placeholder="Enter your name"
+              id="name"
+              placeholder=" "
+              className="form__input"
+              autoComplete="off"
               onChange={(e) => setValue({ ...value, name: e.target.value })}
               required
             />
+            <label htmlFor="fullname" className="form__label">
+              Fullname
+            </label>
           </div>
-          <div className="mb-3">
-            <label htmlFor="address">Address :</label>
+          <div className="forms">
             <input
               type="text"
-              name="address"
-              className="form-control"
-              placeholder="Enter your address"
+              id="address"
+              placeholder=" "
+              className="form__input"
+              autoComplete="off"
               onChange={(e) => setValue({ ...value, address: e.target.value })}
               required
             />
+            <label htmlFor="address" className="form__label">
+              Address
+            </label>
           </div>
-          <div className="mb-3">
-            <label htmlFor="address">Amount :</label>
+          <div className="forms">
             <input
               type="number"
-              name="amount"
-              className="form-control"
+              id="amount"
+              placeholder=" "
+              className="form__input"
+              autoComplete="off"
               onChange={(e) => setValue({ ...value, amount: e.target.value })}
               required
             />
+            <label htmlFor="amount" className="form__label">
+              Amount
+            </label>
           </div>
-          <button className="btn btn-success">Submit</button>
+          <button className="btn-submit">Submit</button>
           <Link to="/list" className="btn btn-primary ms-3">
             Back
           </Link>

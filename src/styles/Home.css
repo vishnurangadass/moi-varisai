@@ -1,0 +1,19 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: center;
+    align-items: center;
+  }
+  .bgText{
+    color: rgb(251, 235, 214);
+  }
+  @media (max-width: 768px) {
+    .bgText{
+        font-size: 25px;
+    }
+    .main-content{
+      height: max-content;
+      margin-top: 50px;
+    }
+}
