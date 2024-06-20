@@ -9,6 +9,7 @@ export default function Update() {
     name: "",
     address: "",
     amount: "",
+    additional:"",
   });
   const navigate = useNavigate();
 
@@ -35,61 +36,78 @@ export default function Update() {
 
   return (
     <div className="d-flex w-100 vh-100 justify-content-center align-items-center ">
-      <div className="w-50 border bg-white shadow px-5 pt-3 pb-5 rounded">
-        <h1>Edit the details</h1>
+      <div className="main-form_update">
+        <h1><strong>Edit the details</strong></h1>
         <form onSubmit={handleSubmit}>
-          <div className="forms">
+          <div className="forms_update">
             <input
               type="text"
               name="name"
               id="name"
               placeholder=" "
-              className="form__input"
+              className="form__input_update"
               autoComplete="off"
               value={value.name}
               onChange={(e) => setValue({ ...value, name: e.target.value })}
               required
             />
-            <label htmlFor="name" className="form__label">
+            <label htmlFor="name" className="form__label_update">
               Fullname
             </label>
           </div>
-          <div className="forms">
+          <div className="forms_update">
             <input
               type="text"
               id="address"
               name="address"
               placeholder=" "
-              className="form__input"
+              className="form__input_update"
               autoComplete="off"
               value={value.address}
               onChange={(e) => setValue({ ...value, address: e.target.value })}
               required
             />
-            <label htmlFor="address" className="form__label">
+            <label htmlFor="address" className="form__label_update">
               Address
             </label>
           </div>
-          <div className="forms">
+          <div className="forms_update">
             <input
               type="number"
               id="amount"
               name="amount"
               placeholder=" "
-              className="form__input"
+              className="form__input_update"
               autoComplete="off"
               value={value.amount}
               onChange={(e) => setValue({ ...value, amount: e.target.value })}
               required
             />
-            <label htmlFor="amount" className="form__label">
+            <label htmlFor="amount" className="form__label_update">
               Amount
             </label>
           </div>
-          <button className="btn-submit">Update</button>
-          <Link to="/list" className="btn btn-primary ms-3">
+          <div className="forms_update">
+            <input
+              type="text"
+              id="additional"
+              name="additional"
+              placeholder=" "
+              className="form__input_update"
+              autoComplete="off"
+              value={value.additional}
+              onChange={(e) => setValue({ ...value, additional: e.target.value })}
+            />
+            <label htmlFor="additional" className="form__label_update">
+              Additional
+            </label>
+          </div>
+          <div className="forms_update_buttons">
+          <button className="btn btn-submit">Update</button>
+          <Link to="/list" className="btn btn-back ms-3">
             Back
           </Link>
+          </div>
         </form>
       </div>
     </div>

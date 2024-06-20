@@ -5,11 +5,11 @@
     justify-content: center;
     align-items: center;
   }
-  .bgText{
+  .bgText_home{
     color: rgb(251, 235, 214);
   }
   @media (max-width: 768px) {
-    .bgText{
+    .bgText_home{
         font-size: 25px;
     }
     .main-content{

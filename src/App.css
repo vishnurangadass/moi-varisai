@@ -1,3 +1,64 @@
- .btn-info{
-  margin-left: 10px;
+
+.btn-submit {
+  margin:10px;
+  width: 10rem;
+  height: 2.5rem;
+  border: 3px solid rgb(7, 142, 7);
+  border-radius: 5px;
+}
+.btn-submit:hover {
+  background-color: rgb(7, 142, 7);
+  color: white;
+}
+.btn-export {
+  margin:10px;
+  width: 10rem;
+  height: 2.5rem;
+  border: 3px solid rgb(230, 52, 42);
+  border-radius: 5px;
+}
+.btn-export:hover {
+  background-color: rgb(230, 52, 42);
+  color: white;
+}
+.btn-edit {
+  margin:10px;
+  width: 10rem;
+  height: 2.5rem;
+  border: 3px solid rgb(255, 255, 0);
+  border-radius: 5px;
+}
+.btn-edit:hover {
+  background-color: rgb(255, 255, 0);
+  color: rgb(10, 10, 10);
+}
+.btn-back {
+  margin:10px;
+  width: 10rem;
+  height: 2.5rem;
+  border: 3px solid  rgb(76, 76, 76);
+  border-radius: 5px;
+}
+.btn-back:hover {
+  background-color: rgb(76, 76, 76);
+  color: white;
+}
+.btn-read{
+  margin:10px;
+  width: 10rem;
+  height: 2.5rem;
+  border: 3px solid  rgb(49, 96, 252);
+  border-radius: 5px;
+}
+.btn-read:hover {
+  background-color:   rgb(49, 96, 252);
+  color: white;
+}
+.trash{
+  border: none;
+}
+@media (max-width: 768px) {
+  .btn-submit,.btn-export,.btn-back,.btn-edit{
+    width: max-content;
+  }
 }

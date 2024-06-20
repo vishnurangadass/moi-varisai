@@ -1,4 +1,4 @@
-.main-form {
+.main-form_userForm {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,13 +10,13 @@
   padding: 30px;
   font-size: 20px;
 }
-.forms {
+.forms_userForm {
   margin: 25px;
   position: relative;
   width: 20rem;
   height: 3rem;
 }
-.form__input {
+.form__input_userForm {
   position: absolute;
   top: 0;
   left: 0;
@@ -32,15 +32,15 @@
   font-family: inherit;
   transition: all 160ms ease-in;
 }
-.form__input:hover {
+.form__input_userForm:hover {
   border-color: rgb(229, 225, 16);
 }
-.form__input:focus {
+.form__input_userForm:focus {
   border-color: rgb(8, 228, 19);
   background-color: transparent;
   color: black;
 }
-.form__label {
+.form__label_userForm {
   position: absolute;
   left: 1rem;
   top: 0.8rem;
@@ -49,39 +49,30 @@
   cursor: text;
   transition: top 200ms ease-in, left 200ms ease-in, top 200ms ease-in;
   font-size: 1rem;
-  background-color: rgb(250, 250, 247);
+  background-color: white;
 }
-.form__input:focus ~ .form__label,
-.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+.form__input_userForm:focus ~ .form__label_userForm,
+.form__input_userForm:not(:placeholder-shown).form__input_userForm:not(:focus)
+  ~ .form__label_userForm {
   top: -0.5rem;
   font-size: 1rem;
   left: 0.8rem;
   z-index: 1111;
 }
-.btn-submit {
-  width: 5rem;
-  height: 2.5rem;
-  border: 3px solid rgb(7, 142, 7);
-  border-radius: 5px;
-}
-.btn-submit:hover {
-  background-color: rgb(7, 142, 7);
-  color: white;
-}
 @media (max-width: 768px) {
-  .main-form {
+  .main-form_userForm {
     width: 300px;
     height: 600px;
     margin-bottom: 50px;
   }
-  .forms {
+  .forms_userForm {
     margin: 10px;
     position: relative;
     width: 20rem;
     height: 3rem;
     padding: 25px;
   }
-  .form__input {
+  .form__input_userForm {
     position: absolute;
     top: 0;
     left: 0;
@@ -96,9 +87,9 @@
     font-size: 1rem;
     font-family: inherit;
     transition: all 160ms ease-in;
-    margin-left:40px;
+    margin-left: 40px;
   }
-  .form__label {
+  .form__label_userForm {
     position: absolute;
     left: 1rem;
     top: 0.8rem;
@@ -108,6 +99,6 @@
     transition: top 200ms ease-in, left 200ms ease-in, top 200ms ease-in;
     font-size: 1rem;
     background-color: rgb(250, 250, 247);
-    margin-left:40px;
+    margin-left: 40px;
   }
 }

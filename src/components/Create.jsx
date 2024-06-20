@@ -8,6 +8,7 @@ export default function Create() {
     name: "",
     address: "",
     amount: "",
+    additional:"",
   });
   const navigate = useNavigate();
 
@@ -22,55 +23,70 @@ export default function Create() {
 
   return (
     <div className="d-flex w-100 vh-100 justify-content-center align-items-center ">
-      <div className="w-50 border bg-white shadow px-5 pt-3 pb-5 rounded">
+      <div className="main-form_create">
+      <h1><strong>Add the details</strong></h1>
         <form onSubmit={handleSubmit}>
-          <h1>Add the details</h1>
-          <div className="forms">
+          <div className="forms_create">
             <input
               type="text"
               id="name"
               placeholder=" "
-              className="form__input"
+              className="form__input_create"
               autoComplete="off"
               onChange={(e) => setValue({ ...value, name: e.target.value })}
               required
             />
-            <label htmlFor="fullname" className="form__label">
+            <label htmlFor="fullname" className="form__label_create">
               Fullname
             </label>
           </div>
-          <div className="forms">
+          <div className="forms_create">
             <input
               type="text"
               id="address"
               placeholder=" "
-              className="form__input"
+              className="form__input_create"
               autoComplete="off"
               onChange={(e) => setValue({ ...value, address: e.target.value })}
               required
             />
-            <label htmlFor="address" className="form__label">
+            <label htmlFor="address" className="form__label_create">
               Address
             </label>
           </div>
-          <div className="forms">
+          <div className="forms_create">
             <input
               type="number"
               id="amount"
               placeholder=" "
-              className="form__input"
+              className="form__input_create"
               autoComplete="off"
               onChange={(e) => setValue({ ...value, amount: e.target.value })}
               required
             />
-            <label htmlFor="amount" className="form__label">
+            <label htmlFor="amount" className="form__label_create">
               Amount
             </label>
           </div>
-          <button className="btn-submit">Submit</button>
-          <Link to="/list" className="btn btn-primary ms-3">
+          <div className="forms_create">
+            <input
+              type="text"
+              id="additional"
+              placeholder=" "
+              className="form__input_create"
+              autoComplete="off"
+              onChange={(e) => setValue({ ...value, additional: e.target.value })}
+            />
+            <label htmlFor="additional" className="form__label_create">
+              Aditional
+            </label>
+          </div>
+          <div className="forms_create_buttons">
+          <button className="btn btn-submit">Submit</button>
+          <Link to="/list" className="btn btn-back ms-3">
             Back
           </Link>
+          </div>
         </form>
       </div>
     </div>

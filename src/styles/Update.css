@@ -1,15 +1,80 @@
-/* .forms {
-    margin: 25px;
+.forms_update {
+  margin: 25px;
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+}
+.forms_update .form__input_update {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #0b0b0b;
+  border-radius: 0.5rem;
+  color: rgb(16, 15, 15);
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 160ms ease-in;
+}
+.form__input_update:hover {
+  border-color: rgb(229, 225, 16);
+}
+.form__input_update:focus {
+  border-color: rgb(8, 228, 19);
+  background-color: transparent;
+  color: black;
+}
+.form__label_update {
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+  padding: 0 0.5rem;
+  color: rgb(1, 56, 1);
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, top 200ms ease-in;
+  font-size: 1rem;
+  background-color: rgb(250, 250, 247);
+}
+.form__input_update:focus ~ .form__label_update,
+.form__input_update:not(:placeholder-shown).form__input_update:not(:focus)
+  ~ .form__label_update {
+  top: -0.5rem;
+  font-size: 1rem;
+  left: 0.8rem;
+  z-index: 1111;
+}
+
+.main-form_update {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: max-content;
+  background-color: white;
+  box-shadow: 5px 5px 5px 5px black;
+  border-radius: 20px;
+  padding: 30px;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+   .main-form_update {
+    width: 300px;
+    height: max-content;
+    margin-bottom: 50px;
+  }
+  .forms_update {
+    margin: 10px;
     position: relative;
     width: 20rem;
     height: 3rem;
+    padding: 25px;
   }
-  .form__input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+   .form__input_update {
+    width: 75% !important;
     border: 2px solid #0b0b0b;
     border-radius: 0.5rem;
     color: rgb(16, 15, 15);
@@ -19,41 +84,21 @@
     font-size: 1rem;
     font-family: inherit;
     transition: all 160ms ease-in;
+    margin-left: 40px;
   }
-  .form__input:hover {
-    border-color: rgb(229, 225, 16);
-  }
-  .form__input:focus {
-    border-color: rgb(8, 228, 19);
-    background-color: transparent;
-    color: black;
-  }
-  .form__label {
+  .form__label_update {
     position: absolute;
     left: 1rem;
     top: 0.8rem;
     padding: 0 0.5rem;
     color: rgb(1, 56, 1);
     cursor: text;
-    transition: top 200ms ease-in,
-    left 200ms ease-in,  top 200ms ease-in;
+    transition: top 200ms ease-in, left 200ms ease-in, top 200ms ease-in;
     font-size: 1rem;
     background-color: rgb(250, 250, 247);
+    margin-left: 40px;
+  } 
+  .forms_update_buttons{
+    margin-left: 20%;
   }
-  .form__input:focus ~ .form__label,.form__input:not(:placeholder-shown).form__input:not(:focus)~.form__label{
-    top: -0.5rem;
-    font-size: 1rem;
-    left:0.8rem;
-    z-index: 1111;
-  }
-  .btn-submit{
-    width:5rem;
-    height: 2.5rem;
-    border: 3px solid rgb(7, 142, 7);
-    border-radius: 5px;
-  }
-  .btn-submit:hover{
-    background-color:rgb(7, 142, 7);
-    color: white;
-  }
-   */
+}

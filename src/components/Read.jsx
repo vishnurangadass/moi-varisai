@@ -18,11 +18,11 @@ export default function Read() {
 
   return (
     <div className="d-flex w-100 vh-100 justify-content-center align-items-center">
-      <div className="w-50 border bg-white shadow px-5 pt-3 pb-5 rounded">
-        <h3>Detail of the user</h3>
+      <div className="main-form_read">
+        <h1><strong>Detail of the user</strong></h1>
         <div className="mb-2">
           <strong>Id : </strong>
-          {parseInt(id)}
+          {parseInt(id)+1}
         </div>
         <div className="mb-2">
           <strong>Name : </strong>
@@ -36,10 +36,14 @@ export default function Read() {
           <strong>Amount : </strong>
           {data?.amount}
         </div>
-        <Link to={`/update/${id}`} className="btn btn-warning ms-3">
+        <div className="mb-3">
+          <strong>Additional: </strong>
+          {data?.additional}
+        </div>
+        <Link to={`/update/${id}`} className="btn btn-edit ms-3">
           Edit
         </Link>
-        <Link to="/list" className="btn btn-primary ms-3">
+        <Link to="/list" className="btn btn-back ms-3">
           Back
         </Link>
       </div>

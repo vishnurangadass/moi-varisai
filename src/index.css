@@ -1,8 +1,8 @@
 body {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 450;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
   font-style: normal;
+  font-optical-sizing: auto;
   margin: 0; /* Ensure there's no margin on the body */
   position: relative; /* Ensure the body is positioned correctly *//* Prevents scrollbars caused by the pseudo-element */
 }
