@@ -37,7 +37,7 @@ export default function Create() {
               required
             />
             <label htmlFor="fullname" className="form__label_create">
-              Fullname
+              Fullname <span className="required">*</span>
             </label>
           </div>
           <div className="forms_create">
@@ -51,7 +51,7 @@ export default function Create() {
               required
             />
             <label htmlFor="address" className="form__label_create">
-              Address
+              Address <span className="required">*</span>
             </label>
           </div>
           <div className="forms_create">
@@ -65,7 +65,7 @@ export default function Create() {
               required
             />
             <label htmlFor="amount" className="form__label_create">
-              Amount
+              Amount <span className="required">*</span>
             </label>
           </div>
           <div className="forms_create">

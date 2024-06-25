@@ -57,6 +57,9 @@
 .trash{
   border: none;
 }
+.required{
+  color:rgb(230, 52, 42); ;
+}
 @media (max-width: 768px) {
   .btn-submit,.btn-export,.btn-back,.btn-edit{
     width: max-content;

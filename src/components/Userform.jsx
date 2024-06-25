@@ -44,7 +44,7 @@ export default function Userform() {
             required
           />
           <label htmlFor="name" className="form__label_userForm">
-            Fullname
+            Fullname <span className="required">*</span>
           </label>
         </div>
         <div className="forms_userForm ">
@@ -60,7 +60,7 @@ export default function Userform() {
             required
           />
           <label htmlFor="emailId" className="form__label_userForm ">
-            Email Id
+            Email Id <span className="required">*</span>
           </label>
         </div>
         <div className="forms_userForm ">
@@ -76,7 +76,7 @@ export default function Userform() {
             required
           />
           <label htmlFor="mobile" className="form__label_userForm ">
-            Mobile
+            Mobile <span className="required">*</span>
           </label>
         </div>
         <div className="forms_userForm ">
@@ -92,7 +92,7 @@ export default function Userform() {
             required
           />
           <label htmlFor="eventName" className="form__label_userForm ">
-            Event Name
+            Event Name <span className="required">*</span>
           </label>
         </div>
         <div className="forms_userForm ">
@@ -108,7 +108,7 @@ export default function Userform() {
             required
           />
           <label htmlFor="place" className="form__label_userForm ">
-            Place
+            Place <span className="required">*</span>
           </label>
         </div>
         <div className="forms_userForm ">
@@ -123,7 +123,7 @@ export default function Userform() {
             required
           />
           <label htmlFor="date" className="form__label_userForm">
-            Date
+            Date <span className="required">*</span>
           </label>
         </div>
         <button type="submit" className="btn btn-submit">

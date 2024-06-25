@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --light-color: #a6b9d3;
+  --text-light-color: #f3f7fc;
+  --text-dark-color: #1d2534;
+  --border-color: #f35c1c;
+  --body-color: #1d2534;
+  --box-shadow: #101010;
+  --table-heading: #24262b;
+  --table-content: #4d4d4d;
+}
+footer {
+    display:flex;
+  margin-top: 100px;
+  color: var(--text-light-color);
+  text-align: center;
+  padding: 10px;
+  margin-bottom: -100%;
+}
+a {
+  color: var(--text-light-color);
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 100px;
+}
+
+.bi {
+  align-items: center;
+  color: var(--footer-color);
+  padding: 2.5px;
+}
+p {
+  font-size: 18px;
+}
+.copyright {
+  margin-left: 10px;
+}
+@media (max-width: 768px) {
+  a {
+    color: var(--text-light-color);
+    text-decoration: none;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 0px;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  .bi {
+    align-items: center;
+    color: var(--footer-color);
+    padding: 2.5px;
+  }
+  p {
+    font-size: 18px;
+  }
+}

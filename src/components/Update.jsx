@@ -52,7 +52,7 @@ export default function Update() {
               required
             />
             <label htmlFor="name" className="form__label_update">
-              Fullname
+              Fullname <span className="required">*</span>
             </label>
           </div>
           <div className="forms_update">
@@ -68,7 +68,7 @@ export default function Update() {
               required
             />
             <label htmlFor="address" className="form__label_update">
-              Address
+              Address <span className="required">*</span>
             </label>
           </div>
           <div className="forms_update">
@@ -84,7 +84,7 @@ export default function Update() {
               required
             />
             <label htmlFor="amount" className="form__label_update">
-              Amount
+              Amount <span className="required">*</span>
             </label>
           </div>
           <div className="forms_update">

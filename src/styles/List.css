@@ -13,6 +13,7 @@
   padding: 30px;
   font-size: 20px;
   margin: 20px;
+  overflow-y: auto;
 }
 .userDetailsText {
   padding-left: 25px;
@@ -43,7 +44,6 @@ td {
   }
   .list-form {
     width: 85%;
-    overflow-y: auto;
   }
   .userDetails {
     flex-direction: column;

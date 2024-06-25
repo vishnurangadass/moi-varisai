@@ -1,0 +1,8 @@
+.bgText_header{
+    color: rgb(251, 235, 214);
+  }
+  @media (max-width: 768px) {
+    .bgText_header{
+        font-size: 25px;
+    }
+}
